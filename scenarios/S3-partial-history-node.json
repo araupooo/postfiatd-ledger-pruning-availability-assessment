@@ -1,0 +1,76 @@
+{
+  "id": "S3-partial-history-node",
+  "title": "Partial-history node: backfill stops at the 256 window",
+  "severity": "MEDIUM",
+  "severity_reason": "The background backfill refuses to fetch anything below the 256-ledger window even though a full-history peer holds it, while on-demand RPC fetches the same ledgers successfully. Stored history never grows past the window; every deep lookup is a live peer fetch.",
+  "notes": "shouldAcquire (LedgerMaster.cpp:75-99) is the gate: it applies to the doAdvance history branch only, not to RPC getLedgerByContext, which acquires directly. The backfill step runs first so its halt at 1743 is measured before any RPC acquire stores ledgers.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 0,
+    "advisory_delete": false
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 2000,
+    "last_rotated": 2000,
+    "can_delete": 4294967295,
+    "minimum_online": 0,
+    "complete_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "backfill"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506,
+        1507,
+        1508,
+        1509
+      ],
+      "kind": "index"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1000,
+        1001,
+        1002,
+        1003,
+        1004
+      ],
+      "kind": "index"
+    }
+  ]
+}

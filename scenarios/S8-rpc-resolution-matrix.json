@@ -1,0 +1,108 @@
+{
+  "id": "S8-rpc-resolution-matrix",
+  "title": "RPC ledger resolution matrix (index, hash, age, version)",
+  "severity": "LOW",
+  "severity_reason": "Every documented branch resolves as coded, with one asymmetry worth knowing: hash requests bypass the validated-age gate that index requests hit, so a stale node still serves hash lookups while index lookups return rpcNOT_SYNCED.",
+  "notes": "Validated age is set to 121 s (above the 2-minute maxValidatedLedgerAge, Tuning.h:65) for the first four requests, then reset to 0. The v1 request shows the rpcNO_CURRENT spelling. The both-set request is rejected before any other check.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 0,
+    "advisory_delete": false
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 2000,
+    "last_rotated": 2000,
+    "can_delete": 4294967295,
+    "minimum_online": 0,
+    "complete_ranges": [
+      [
+        1,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        2000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        1,
+        2000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "set_age",
+      "seconds": 121
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1999
+      ],
+      "kind": "index"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1999
+      ],
+      "kind": "hash"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1999
+      ],
+      "kind": "index",
+      "api_version": 1
+    },
+    {
+      "op": "rpc_fetch_both",
+      "seq": 1999
+    },
+    {
+      "op": "set_age",
+      "seconds": 0
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        2000
+      ],
+      "kind": "index"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        0
+      ],
+      "kind": "index"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1999
+      ],
+      "kind": "index"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1999
+      ],
+      "kind": "hash"
+    }
+  ]
+}

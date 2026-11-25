@@ -1,0 +1,80 @@
+{
+  "id": "S6-can-delete-advisory",
+  "title": "Advisory can_delete: never, hash, now, always",
+  "severity": "LOW",
+  "severity_reason": "Advisory delete works exactly as documented: 'never' blocks rotation entirely, a hash authorises up to that ledger, 'now' authorises exactly one more rotation (the gate is can_delete >= lastRotated - 1), and 'always' releases every later rotation.",
+  "notes": "Advisory delete is ON, so can_delete starts at 0 ('never'). The hash argument names ledger 1200, which the node holds. 'now' sets can_delete to lastRotated at that moment; because the rotation gate is can_delete >= lastRotated - 1, that authorises exactly one more rotation. 'always' releases every later rotation. Note also that a rotation sets lastRotated to the current validated tip, not to the gate threshold, so a rotation delayed by can_delete fires late and the next interval is counted from the late tip.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 256,
+    "advisory_delete": true
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 1000,
+    "last_rotated": 1000,
+    "can_delete": 0,
+    "minimum_online": 0,
+    "complete_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        1,
+        1000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "can_delete",
+      "arg": "never"
+    },
+    {
+      "op": "validate",
+      "count": 300
+    },
+    {
+      "op": "can_delete",
+      "arg": {
+        "hash_seq": 1200
+      }
+    },
+    {
+      "op": "validate",
+      "count": 300
+    },
+    {
+      "op": "can_delete",
+      "arg": "now"
+    },
+    {
+      "op": "validate",
+      "count": 300
+    },
+    {
+      "op": "can_delete",
+      "arg": "always"
+    },
+    {
+      "op": "validate",
+      "count": 300
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "id": "S5-backfill-with-full-peer",
+  "title": "Backfill with a full-history second peer",
+  "severity": "LOW",
+  "severity_reason": "With a full-history peer available, the backfill reaches the online-delete floor (1257) and stops there: 743 ledgers acquired. The floor, not peer availability, is the binding constraint.",
+  "notes": "Same starting state as S4, with a full-history peer added. The contrast with S4 isolates the cause: the peer can supply everything, but shouldAcquire refuses below 1256 (2000-1256=744 > 256 and 1256 < minimumOnline 1257). Compare with S3, where no online-delete floor exists and the backfill stops at the 256 window instead.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 256,
+    "advisory_delete": false
+  },
+  "peers": [
+    {
+      "id": 2,
+      "min_seq": 1258,
+      "tip": 2500
+    },
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 2000,
+    "last_rotated": 1256,
+    "can_delete": 4294967295,
+    "minimum_online": 1257,
+    "complete_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "backfill"
+    }
+  ]
+}

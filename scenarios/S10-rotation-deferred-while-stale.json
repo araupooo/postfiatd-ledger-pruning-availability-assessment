@@ -1,0 +1,74 @@
+{
+  "id": "S10-rotation-deferred-while-stale",
+  "title": "Rotation deferred while stale or syncing, then catches up",
+  "severity": "LOW",
+  "severity_reason": "Rotation is deferred for 300 ledgers while the validated age is 61 s (above the 60 s threshold) and for 10 more while the node is syncing, then fires on the first close after the node is healthy again. No data is lost beyond the configured interval.",
+  "notes": "The age override pins validated age at 61 s (SHAMapStoreImp.cpp:680-690, ageThreshold_ 60 s). The mode override sets state to SYNCING, which also fails healthWait. Both deferrals are visible as zero rotations across 310 validated ledgers.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 256,
+    "advisory_delete": false
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 1000,
+    "last_rotated": 1000,
+    "can_delete": 4294967295,
+    "minimum_online": 0,
+    "complete_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        1,
+        1000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "set_age_override",
+      "seconds": 61
+    },
+    {
+      "op": "validate",
+      "count": 300
+    },
+    {
+      "op": "set_mode",
+      "mode": "SYNCING"
+    },
+    {
+      "op": "validate",
+      "count": 10
+    },
+    {
+      "op": "set_mode",
+      "mode": "FULL"
+    },
+    {
+      "op": "set_age_override",
+      "seconds": null
+    },
+    {
+      "op": "validate",
+      "count": 300
+    }
+  ]
+}

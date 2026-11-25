@@ -1,0 +1,49 @@
+{
+  "id": "S4-backfill-from-pruned-peer",
+  "title": "Backfill from a pruned peer stalls at the peer boundary",
+  "severity": "MEDIUM",
+  "severity_reason": "Backfill recovers 742 ledgers down to the peer's prune boundary (1258), then the floor ledger 1257 fails after 7 acquire timeouts (21 s) because no peer holds it. Everything below the online-delete floor is never attempted by design, so the node's history stops at 1258 with a one-ledger gap at the floor.",
+  "notes": "Online delete is ON with lastRotated 1256, so minimumOnline is 1257 (the floor). The node starts with only the tip (2000). shouldAcquire passes every ledger down to the floor because candidate >= minimumOnline; the backfill therefore descends past the 256 window until it reaches 1257, which the pruned peer does not hold. The halt is a fetch failure, not a gate refusal: the real node would retry 1257 on later doAdvance passes, after the 5-minute reacquire interval (InboundLedgers.cpp:50-51).",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 256,
+    "advisory_delete": false
+  },
+  "peers": [
+    {
+      "id": 2,
+      "min_seq": 1258,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 2000,
+    "last_rotated": 1256,
+    "can_delete": 4294967295,
+    "minimum_online": 1257,
+    "complete_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "backfill"
+    }
+  ]
+}

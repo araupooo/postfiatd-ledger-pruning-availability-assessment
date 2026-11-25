@@ -1,0 +1,74 @@
+{
+  "id": "S1-aggressive-pruning",
+  "title": "Aggressive pruning: online_delete 256 over 600 ledgers",
+  "severity": "LOW",
+  "severity_reason": "Pruning deletes exactly as configured and the node keeps serving every requested ledger because a full-history peer exists. The availability cost appears only when no such peer exists (see S2).",
+  "notes": "Advisory delete is OFF, so can_delete stays at the UINT32_MAX default and rotation is gated only by the interval, the validated age, and FULL mode (SHAMapStoreImp.cpp:331-344). The RPC fetches include ledgers below the new minimumOnline to show they are served only through a peer acquire.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 256,
+    "advisory_delete": false,
+    "delete_batch": 100
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 1000,
+    "last_rotated": 1000,
+    "can_delete": 4294967295,
+    "minimum_online": 0,
+    "complete_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        1,
+        1000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "validate",
+      "count": 600
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1005,
+        1100,
+        1200,
+        1256,
+        1257,
+        1400,
+        1500,
+        1599
+      ],
+      "kind": "index"
+    },
+    {
+      "op": "fetch_pack",
+      "roots": [
+        1000,
+        1256,
+        1400,
+        1600
+      ]
+    }
+  ]
+}

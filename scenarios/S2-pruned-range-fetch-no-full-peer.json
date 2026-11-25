@@ -1,0 +1,74 @@
+{
+  "id": "S2-pruned-range-fetch-no-full-peer",
+  "title": "Pruned-range fetch with no full-history peer",
+  "severity": "HIGH",
+  "severity_reason": "Every pruned-range request fails: 7 of 7 return lgrNotFound. The 4 first attempts each burn 7 acquire timeouts (21 s); the 3 repeats of the failed candidate hash short-circuit on the failed-hash cache (0 ms). Total wasted acquire time 84,000 ms. The data is unrecoverable from the available peer set.",
+  "notes": "The node holds 1256-1600; the only peer holds 1258-2500. Seq 1000 exercises the candidate-ledger path: its 256-boundary reference (1024) is not held either, so the RPC returns 'acquiring ledger containing requested index'. The hash-kind request for 1010 shows a hash lookup fails the same way. In-window fetches (1300, 1400, 1500) are the control.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 256,
+    "advisory_delete": false
+  },
+  "peers": [
+    {
+      "id": 2,
+      "min_seq": 1258,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 1600,
+    "last_rotated": 1512,
+    "can_delete": 4294967295,
+    "minimum_online": 1257,
+    "complete_ranges": [
+      [
+        1256,
+        1600
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1256,
+        1600
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        1256,
+        1600
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1000,
+        1005,
+        1010,
+        1020,
+        1100,
+        1200
+      ],
+      "kind": "index"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1010
+      ],
+      "kind": "hash"
+    },
+    {
+      "op": "rpc_fetch",
+      "seqs": [
+        1300,
+        1400,
+        1500
+      ],
+      "kind": "index"
+    }
+  ]
+}

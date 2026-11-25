@@ -1,0 +1,70 @@
+{
+  "id": "S7-ledger-cleaner-repair",
+  "title": "LedgerCleaner repair depends on peer availability",
+  "severity": "MEDIUM",
+  "severity_reason": "Repair succeeds for every ledger a peer holds (3 of 4: one recovered from the peer, one with a re-saved SQL row), and fails for the one ledger no peer holds (1000), which is dropped from the complete set. A pruned ledger with no full peer cannot be repaired.",
+  "notes": "The node holds 1-2000 in SQL but two ledgers lost their node-store objects (1000, 1500) and one has a corrupted SQL hash (1600). The only peer holds 1258-2500. The cleaner acquires the ledger first (which re-stores its nodes), then compares against the SQL row.",
+  "config": {
+    "ledger_history": 256,
+    "fetch_depth": 1000000000,
+    "online_delete": 0,
+    "advisory_delete": false
+  },
+  "peers": [
+    {
+      "id": 2,
+      "min_seq": 1258,
+      "tip": 2500
+    }
+  ],
+  "initial": {
+    "tip": 2000,
+    "last_rotated": 2000,
+    "can_delete": 4294967295,
+    "minimum_online": 0,
+    "complete_ranges": [
+      [
+        1,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        2000
+      ]
+    ],
+    "nodestore_ranges": [
+      [
+        1,
+        2000
+      ]
+    ]
+  },
+  "steps": [
+    {
+      "op": "corrupt",
+      "seqs": [
+        1000,
+        1500
+      ],
+      "what": "nodes"
+    },
+    {
+      "op": "corrupt",
+      "seqs": [
+        1600
+      ],
+      "what": "sql"
+    },
+    {
+      "op": "clean",
+      "seqs": [
+        1000,
+        1500,
+        1600,
+        1700
+      ]
+    }
+  ]
+}
