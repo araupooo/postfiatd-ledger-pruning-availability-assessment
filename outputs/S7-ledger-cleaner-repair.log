@@ -1,0 +1,15 @@
+[seq 2000 t+0ms] corrupted ledger 1000: nodes removed from node store
+[seq 2000 t+0ms] corrupted ledger 1500: nodes removed from node store
+[seq 2000 t+0ms] corrupted ledger 1600: SQL row hash replaced with zeros
+[seq 2000 t+0ms] acquire ledger 1000 timeout 1/6
+[seq 2000 t+0ms] acquire ledger 1000 timeout 2/6
+[seq 2000 t+0ms] acquire ledger 1000 timeout 3/6
+[seq 2000 t+0ms] acquire ledger 1000 timeout 4/6
+[seq 2000 t+0ms] acquire ledger 1000 timeout 5/6
+[seq 2000 t+0ms] acquire ledger 1000 timeout 6/6
+[seq 2000 t+0ms] acquire ledger 1000 timeout 7/6
+[seq 2000 t+0ms] acquire ledger 1000 failed after 7 timeouts
+[seq 2000 t+0ms] cleaner: ledger 1000 not available
+[seq 2000 t+0ms] acquired ledger 1500 from peer 2 in 120ms
+[seq 2000 t+0ms] acquired ledger 1600 from peer 2 in 316ms
+[seq 2000 t+0ms] acquired ledger 1700 from peer 2 in 732ms

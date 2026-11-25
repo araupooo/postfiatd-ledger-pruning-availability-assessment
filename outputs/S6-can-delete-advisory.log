@@ -1,0 +1,20 @@
+[seq 1000 t+0ms] can_delete set to 0
+[seq 1000 t+0ms] validating 300 ledgers
+[seq 1300 t+1200000ms] can_delete set to 1200
+[seq 1300 t+1200000ms] validating 300 ledgers
+[seq 1301 t+1204000ms] rotating validatedSeq 1301 lastRotated 1000 deleteInterval 256 canDelete_ 1200 state FULL age 0s
+[seq 1301 t+1204900ms] finished deleting from: Ledgers (999 rows, 10 batches)
+[seq 1301 t+1204900ms] copied ledger 1301 nodecount 128
+[seq 1600 t+2400900ms] can_delete set to 1301
+[seq 1600 t+2400900ms] validating 300 ledgers
+[seq 1601 t+2404900ms] rotating validatedSeq 1601 lastRotated 1301 deleteInterval 256 canDelete_ 1301 state FULL age 0s
+[seq 1601 t+2405200ms] finished deleting from: Ledgers (301 rows, 4 batches)
+[seq 1601 t+2405200ms] copied ledger 1601 nodecount 128
+[seq 1900 t+3601200ms] can_delete set to 4294967295
+[seq 1900 t+3601200ms] validating 300 ledgers
+[seq 1901 t+3605200ms] rotating validatedSeq 1901 lastRotated 1601 deleteInterval 256 canDelete_ 4294967295 state FULL age 0s
+[seq 1901 t+3605400ms] finished deleting from: Ledgers (300 rows, 3 batches)
+[seq 1901 t+3605400ms] copied ledger 1901 nodecount 128
+[seq 2157 t+4629400ms] rotating validatedSeq 2157 lastRotated 1901 deleteInterval 256 canDelete_ 4294967295 state FULL age 0s
+[seq 2157 t+4629600ms] finished deleting from: Ledgers (300 rows, 3 batches)
+[seq 2157 t+4629600ms] copied ledger 2157 nodecount 128

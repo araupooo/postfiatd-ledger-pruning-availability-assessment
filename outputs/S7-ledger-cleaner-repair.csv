@@ -1,0 +1,5 @@
+scenario,op,kind,seq,outcome,detail,acquire_ms,api_version
+S7-ledger-cleaner-repair,clean,,1000,failed,,0,
+S7-ledger-cleaner-repair,clean,,1500,cleaned,,0,
+S7-ledger-cleaner-repair,clean,,1600,cleaned,,0,
+S7-ledger-cleaner-repair,clean,,1700,cleaned,,0,

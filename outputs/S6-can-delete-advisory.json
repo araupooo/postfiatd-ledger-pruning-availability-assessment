@@ -1,0 +1,193 @@
+{
+  "config": {
+    "advisory_delete": true,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 256
+  },
+  "events": [
+    {
+      "clock_ms": 1204900,
+      "detail": "lastRotated 1000 -> 1301; minimumOnline 1001",
+      "event": "rotate",
+      "seq": 1301,
+      "step_seq": 1301,
+      "value": 1301
+    },
+    {
+      "clock_ms": 2405200,
+      "detail": "lastRotated 1301 -> 1601; minimumOnline 1302",
+      "event": "rotate",
+      "seq": 1601,
+      "step_seq": 1601,
+      "value": 1601
+    },
+    {
+      "clock_ms": 3605400,
+      "detail": "lastRotated 1601 -> 1901; minimumOnline 1602",
+      "event": "rotate",
+      "seq": 1901,
+      "step_seq": 1901,
+      "value": 1901
+    },
+    {
+      "clock_ms": 4629600,
+      "detail": "lastRotated 1901 -> 2157; minimumOnline 1902",
+      "event": "rotate",
+      "seq": 2157,
+      "step_seq": 2157,
+      "value": 2157
+    }
+  ],
+  "final": {
+    "cache_entries": 44,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 256,
+    "complete_ledgers": "1901-2200",
+    "counters": {
+      "acquire_attempts": 0,
+      "acquire_failed": 0,
+      "acquire_ms_total": 0,
+      "acquire_success": 0,
+      "acquire_timeouts": 0,
+      "backfill_acquired": 0,
+      "backfill_failed": 0,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 0,
+      "fetch_packs_requested": 0,
+      "fetch_packs_served": 0,
+      "rotations": 4,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 0,
+      "sql_delete_batches": 20,
+      "sql_rows_deleted": 1900
+    },
+    "get_earliest_fetch": 1944,
+    "last_rotated": 2157,
+    "minimum_online": 1902,
+    "published": 2200,
+    "sql_max": 2200,
+    "sql_min": 1901,
+    "sql_rows": 300,
+    "tip": 2200,
+    "validated_range": [
+      1901,
+      2200
+    ]
+  },
+  "initial": {
+    "can_delete": 0,
+    "complete_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "last_rotated": 1000,
+    "minimum_online": 0,
+    "nodestore_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "tip": 1000
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [],
+  "scenario_id": "S6-can-delete-advisory",
+  "severity": "LOW",
+  "severity_reason": "Advisory delete works exactly as documented: 'never' blocks rotation entirely, a hash authorises up to that ledger, 'now' authorises exactly one more rotation (the gate is can_delete >= lastRotated - 1), and 'always' releases every later rotation.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 0,
+      "arg": "never",
+      "op": "can_delete",
+      "outcome": "ok",
+      "step": 0,
+      "value": 0
+    },
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1000,
+      "op": "validate",
+      "rotations": 0,
+      "step": 1,
+      "tip": 1300,
+      "validated": 300
+    },
+    {
+      "acquire_ms_step": 0,
+      "arg": {
+        "hash_seq": 1200
+      },
+      "op": "can_delete",
+      "outcome": "ok",
+      "step": 2,
+      "value": 1200
+    },
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1301,
+      "op": "validate",
+      "rotations": 1,
+      "step": 3,
+      "tip": 1600,
+      "validated": 300
+    },
+    {
+      "acquire_ms_step": 0,
+      "arg": "now",
+      "op": "can_delete",
+      "outcome": "ok",
+      "step": 4,
+      "value": 1301
+    },
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1601,
+      "op": "validate",
+      "rotations": 2,
+      "step": 5,
+      "tip": 1900,
+      "validated": 300
+    },
+    {
+      "acquire_ms_step": 0,
+      "arg": "always",
+      "op": "can_delete",
+      "outcome": "ok",
+      "step": 6,
+      "value": 4294967295
+    },
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 2157,
+      "op": "validate",
+      "rotations": 4,
+      "step": 7,
+      "tip": 2200,
+      "validated": 300
+    }
+  ],
+  "title": "Advisory can_delete: never, hash, now, always"
+}

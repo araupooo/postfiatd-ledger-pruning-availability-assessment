@@ -1,0 +1,161 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 0
+  },
+  "events": [],
+  "final": {
+    "cache_entries": 4,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 1000000000,
+    "complete_ledgers": "1-999,1001-2000",
+    "counters": {
+      "acquire_attempts": 5,
+      "acquire_failed": 2,
+      "acquire_ms_total": 22168,
+      "acquire_success": 3,
+      "acquire_timeouts": 7,
+      "backfill_acquired": 0,
+      "backfill_failed": 0,
+      "cleaner_cleaned": 3,
+      "cleaner_failed": 1,
+      "fetch_packs_refused": 0,
+      "fetch_packs_requested": 0,
+      "fetch_packs_served": 0,
+      "rotations": 0,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 0,
+      "sql_delete_batches": 0,
+      "sql_rows_deleted": 0
+    },
+    "get_earliest_fetch": 0,
+    "last_rotated": 2000,
+    "minimum_online": 1,
+    "published": 2000,
+    "sql_max": 2000,
+    "sql_min": 1,
+    "sql_rows": 2000,
+    "tip": 2000,
+    "validated_range": [
+      1001,
+      2000
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        1,
+        2000
+      ]
+    ],
+    "last_rotated": 2000,
+    "minimum_online": 0,
+    "nodestore_ranges": [
+      [
+        1,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        2000
+      ]
+    ],
+    "tip": 2000
+  },
+  "peers": [
+    {
+      "id": 2,
+      "min_seq": 1258,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "",
+      "kind": "",
+      "op": "clean",
+      "outcome": "failed",
+      "scenario": "S7-ledger-cleaner-repair",
+      "seq": 1000
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "",
+      "kind": "",
+      "op": "clean",
+      "outcome": "cleaned",
+      "scenario": "S7-ledger-cleaner-repair",
+      "seq": 1500
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "",
+      "kind": "",
+      "op": "clean",
+      "outcome": "cleaned",
+      "scenario": "S7-ledger-cleaner-repair",
+      "seq": 1600
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "",
+      "kind": "",
+      "op": "clean",
+      "outcome": "cleaned",
+      "scenario": "S7-ledger-cleaner-repair",
+      "seq": 1700
+    }
+  ],
+  "scenario_id": "S7-ledger-cleaner-repair",
+  "severity": "MEDIUM",
+  "severity_reason": "Repair succeeds for every ledger a peer holds (3 of 4: one recovered from the peer, one with a re-saved SQL row), and fails for the one ledger no peer holds (1000), which is dropped from the complete set. A pruned ledger with no full peer cannot be repaired.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 0,
+      "op": "corrupt",
+      "seqs": [
+        1000,
+        1500
+      ],
+      "step": 0,
+      "what": "nodes"
+    },
+    {
+      "acquire_ms_step": 0,
+      "op": "corrupt",
+      "seqs": [
+        1600
+      ],
+      "step": 1,
+      "what": "sql"
+    },
+    {
+      "acquire_ms_step": 22168,
+      "op": "clean",
+      "results": {
+        "1000": "failed",
+        "1500": "cleaned",
+        "1600": "cleaned",
+        "1700": "cleaned"
+      },
+      "step": 2
+    }
+  ],
+  "title": "LedgerCleaner repair depends on peer availability"
+}
