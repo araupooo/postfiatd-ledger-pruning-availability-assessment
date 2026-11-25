@@ -1,0 +1,107 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 256
+  },
+  "events": [
+    {
+      "clock_ms": 0,
+      "detail": "fetchForHistory failed; gap remains",
+      "event": "backfill_halt",
+      "seq": 1257,
+      "step_seq": 2000,
+      "value": null
+    }
+  ],
+  "final": {
+    "cache_entries": 743,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 256,
+    "complete_ledgers": "1258-2000",
+    "counters": {
+      "acquire_attempts": 743,
+      "acquire_failed": 1,
+      "acquire_ms_total": 367461,
+      "acquire_success": 742,
+      "acquire_timeouts": 7,
+      "backfill_acquired": 742,
+      "backfill_failed": 1,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 0,
+      "fetch_packs_requested": 1,
+      "fetch_packs_served": 0,
+      "rotations": 0,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 0,
+      "sql_delete_batches": 0,
+      "sql_rows_deleted": 0
+    },
+    "get_earliest_fetch": 1744,
+    "last_rotated": 1256,
+    "minimum_online": 1257,
+    "published": 2000,
+    "sql_max": 2000,
+    "sql_min": 1258,
+    "sql_rows": 743,
+    "tip": 2000,
+    "validated_range": [
+      1258,
+      2000
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ],
+    "last_rotated": 1256,
+    "minimum_online": 1257,
+    "nodestore_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        2000,
+        2000
+      ]
+    ],
+    "tip": 2000
+  },
+  "peers": [
+    {
+      "id": 2,
+      "min_seq": 1258,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [],
+  "scenario_id": "S4-backfill-from-pruned-peer",
+  "severity": "MEDIUM",
+  "severity_reason": "Backfill recovers 742 ledgers down to the peer's prune boundary (1258), then the floor ledger 1257 fails after 7 acquire timeouts (21 s) because no peer holds it. Everything below the online-delete floor is never attempted by design, so the node's history stops at 1258 with a one-ledger gap at the floor.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 367461,
+      "acquired": 742,
+      "failed": 1,
+      "op": "backfill",
+      "outcome": "fetch-failed",
+      "step": 0
+    }
+  ],
+  "title": "Backfill from a pruned peer stalls at the peer boundary"
+}

@@ -1,0 +1,32 @@
+[seq 1600 t+0ms] acquire ledger 1024 timeout 1/6
+[seq 1600 t+0ms] acquire ledger 1024 timeout 2/6
+[seq 1600 t+0ms] acquire ledger 1024 timeout 3/6
+[seq 1600 t+0ms] acquire ledger 1024 timeout 4/6
+[seq 1600 t+0ms] acquire ledger 1024 timeout 5/6
+[seq 1600 t+0ms] acquire ledger 1024 timeout 6/6
+[seq 1600 t+0ms] acquire ledger 1024 timeout 7/6
+[seq 1600 t+0ms] acquire ledger 1024 failed after 7 timeouts
+[seq 1600 t+0ms] acquire ledger 1100 timeout 1/6
+[seq 1600 t+0ms] acquire ledger 1100 timeout 2/6
+[seq 1600 t+0ms] acquire ledger 1100 timeout 3/6
+[seq 1600 t+0ms] acquire ledger 1100 timeout 4/6
+[seq 1600 t+0ms] acquire ledger 1100 timeout 5/6
+[seq 1600 t+0ms] acquire ledger 1100 timeout 6/6
+[seq 1600 t+0ms] acquire ledger 1100 timeout 7/6
+[seq 1600 t+0ms] acquire ledger 1100 failed after 7 timeouts
+[seq 1600 t+0ms] acquire ledger 1200 timeout 1/6
+[seq 1600 t+0ms] acquire ledger 1200 timeout 2/6
+[seq 1600 t+0ms] acquire ledger 1200 timeout 3/6
+[seq 1600 t+0ms] acquire ledger 1200 timeout 4/6
+[seq 1600 t+0ms] acquire ledger 1200 timeout 5/6
+[seq 1600 t+0ms] acquire ledger 1200 timeout 6/6
+[seq 1600 t+0ms] acquire ledger 1200 timeout 7/6
+[seq 1600 t+0ms] acquire ledger 1200 failed after 7 timeouts
+[seq 1600 t+0ms] acquire ledger 1010 timeout 1/6
+[seq 1600 t+0ms] acquire ledger 1010 timeout 2/6
+[seq 1600 t+0ms] acquire ledger 1010 timeout 3/6
+[seq 1600 t+0ms] acquire ledger 1010 timeout 4/6
+[seq 1600 t+0ms] acquire ledger 1010 timeout 5/6
+[seq 1600 t+0ms] acquire ledger 1010 timeout 6/6
+[seq 1600 t+0ms] acquire ledger 1010 timeout 7/6
+[seq 1600 t+0ms] acquire ledger 1010 failed after 7 timeouts

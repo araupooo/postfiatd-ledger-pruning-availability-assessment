@@ -1,0 +1,16 @@
+scenario,op,kind,seq,outcome,detail,acquire_ms,api_version
+S3-partial-history-node,rpc_fetch,index,1500,served,1500,1108,2
+S3-partial-history-node,rpc_fetch,index,1501,served,1501,566,2
+S3-partial-history-node,rpc_fetch,index,1502,served,1502,811,2
+S3-partial-history-node,rpc_fetch,index,1503,served,1503,339,2
+S3-partial-history-node,rpc_fetch,index,1504,served,1504,256,2
+S3-partial-history-node,rpc_fetch,index,1505,served,1505,282,2
+S3-partial-history-node,rpc_fetch,index,1506,served,1506,817,2
+S3-partial-history-node,rpc_fetch,index,1507,served,1507,604,2
+S3-partial-history-node,rpc_fetch,index,1508,served,1508,700,2
+S3-partial-history-node,rpc_fetch,index,1509,served,1509,394,2
+S3-partial-history-node,rpc_fetch,index,1000,served,1000,730,2
+S3-partial-history-node,rpc_fetch,index,1001,served,1001,64,2
+S3-partial-history-node,rpc_fetch,index,1002,served,1002,760,2
+S3-partial-history-node,rpc_fetch,index,1003,served,1003,275,2
+S3-partial-history-node,rpc_fetch,index,1004,served,1004,102,2

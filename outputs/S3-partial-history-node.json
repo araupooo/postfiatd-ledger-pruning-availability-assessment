@@ -1,0 +1,278 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 0
+  },
+  "events": [
+    {
+      "clock_ms": 0,
+      "detail": "shouldAcquire refused: outside ledger_history window and below minimumOnline 1744",
+      "event": "backfill_halt",
+      "seq": 1743,
+      "step_seq": 2000,
+      "value": 1744
+    }
+  ],
+  "final": {
+    "cache_entries": 18,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 1000000000,
+    "complete_ledgers": "1000-1004,1024,1500-1509,1536,1744-2000",
+    "counters": {
+      "acquire_attempts": 17,
+      "acquire_failed": 0,
+      "acquire_ms_total": 7808,
+      "acquire_success": 17,
+      "acquire_timeouts": 0,
+      "backfill_acquired": 0,
+      "backfill_failed": 1,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 0,
+      "fetch_packs_requested": 0,
+      "fetch_packs_served": 0,
+      "rotations": 0,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 15,
+      "sql_delete_batches": 0,
+      "sql_rows_deleted": 0
+    },
+    "get_earliest_fetch": 0,
+    "last_rotated": 2000,
+    "minimum_online": 1000,
+    "published": 2000,
+    "sql_max": 2000,
+    "sql_min": 1000,
+    "sql_rows": 274,
+    "tip": 2000,
+    "validated_range": [
+      1744,
+      2000
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "last_rotated": 2000,
+    "minimum_online": 0,
+    "nodestore_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "tip": 2000
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [
+    {
+      "acquire_ms": 1108,
+      "api_version": 2,
+      "detail": 1500,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1500
+    },
+    {
+      "acquire_ms": 566,
+      "api_version": 2,
+      "detail": 1501,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1501
+    },
+    {
+      "acquire_ms": 811,
+      "api_version": 2,
+      "detail": 1502,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1502
+    },
+    {
+      "acquire_ms": 339,
+      "api_version": 2,
+      "detail": 1503,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1503
+    },
+    {
+      "acquire_ms": 256,
+      "api_version": 2,
+      "detail": 1504,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1504
+    },
+    {
+      "acquire_ms": 282,
+      "api_version": 2,
+      "detail": 1505,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1505
+    },
+    {
+      "acquire_ms": 817,
+      "api_version": 2,
+      "detail": 1506,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1506
+    },
+    {
+      "acquire_ms": 604,
+      "api_version": 2,
+      "detail": 1507,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1507
+    },
+    {
+      "acquire_ms": 700,
+      "api_version": 2,
+      "detail": 1508,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1508
+    },
+    {
+      "acquire_ms": 394,
+      "api_version": 2,
+      "detail": 1509,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1509
+    },
+    {
+      "acquire_ms": 730,
+      "api_version": 2,
+      "detail": 1000,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1000
+    },
+    {
+      "acquire_ms": 64,
+      "api_version": 2,
+      "detail": 1001,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1001
+    },
+    {
+      "acquire_ms": 760,
+      "api_version": 2,
+      "detail": 1002,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1002
+    },
+    {
+      "acquire_ms": 275,
+      "api_version": 2,
+      "detail": 1003,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1003
+    },
+    {
+      "acquire_ms": 102,
+      "api_version": 2,
+      "detail": 1004,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S3-partial-history-node",
+      "seq": 1004
+    }
+  ],
+  "scenario_id": "S3-partial-history-node",
+  "severity": "MEDIUM",
+  "severity_reason": "The background backfill refuses to fetch anything below the 256-ledger window even though a full-history peer holds it, while on-demand RPC fetches the same ledgers successfully. Stored history never grows past the window; every deep lookup is a live peer fetch.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 0,
+      "acquired": 0,
+      "failed": 1,
+      "op": "backfill",
+      "outcome": "gate-refused",
+      "step": 0
+    },
+    {
+      "acquire_ms_step": 5877,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcomes": {
+        "served": 10
+      },
+      "requested": 10,
+      "step": 1
+    },
+    {
+      "acquire_ms_step": 1931,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcomes": {
+        "served": 5
+      },
+      "requested": 5,
+      "step": 2
+    }
+  ],
+  "title": "Partial-history node: backfill stops at the 256 window"
+}
