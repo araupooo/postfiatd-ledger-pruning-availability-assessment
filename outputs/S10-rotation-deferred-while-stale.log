@@ -1,0 +1,9 @@
+[seq 1000 t+0ms] validating 300 ledgers
+[seq 1300 t+1200000ms] validating 10 ledgers
+[seq 1310 t+1240000ms] validating 300 ledgers
+[seq 1311 t+1244000ms] rotating validatedSeq 1311 lastRotated 1000 deleteInterval 256 canDelete_ 4294967295 state FULL age 0s
+[seq 1311 t+1244900ms] finished deleting from: Ledgers (999 rows, 10 batches)
+[seq 1311 t+1244900ms] copied ledger 1311 nodecount 128
+[seq 1567 t+2268900ms] rotating validatedSeq 1567 lastRotated 1311 deleteInterval 256 canDelete_ 4294967295 state FULL age 0s
+[seq 1567 t+2269200ms] finished deleting from: Ledgers (311 rows, 4 batches)
+[seq 1567 t+2269200ms] copied ledger 1567 nodecount 128

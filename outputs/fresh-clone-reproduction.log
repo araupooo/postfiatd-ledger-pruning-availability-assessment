@@ -1,0 +1,191 @@
+Fresh-clone reproduction transcript
+Pack: postfiatd-ledger-pruning-availability-assessment
+Clone directory (relative label): fresh-clone
+Reproduction commands (from README):
+  bash scripts/run_all.sh
+  bash scripts/verify_digests.sh
+Note: this transcript records the reproduction of the pack state before the transcript itself was added. The clone's verify_digests.sh run below covers that state; the final pack's verify_digests.sh (run after the transcript was added and SHA256SUMS regenerated) covers the transcript too. The manifest excludes itself, SHA256SUMS, and outputs/run_all.log.
+
+=== bash scripts/run_all.sh ===
+
+exit status: 0
+
+=== outputs/run_all.log from the fresh-clone run ===
+run_all.sh: starting
+S0-baseline-full-history: 120 rows, 0 events, tip 1120, sql_rows 1120, rotations 0
+S1-aggressive-pruning: 12 rows, 2 events, tip 1600, sql_rows 349, rotations 2
+S10-rotation-deferred-while-stale: 0 rows, 2 events, tip 1610, sql_rows 300, rotations 2
+S2-pruned-range-fetch-no-full-peer: 10 rows, 0 events, tip 1600, sql_rows 345, rotations 0
+S3-partial-history-node: 15 rows, 1 events, tip 2000, sql_rows 274, rotations 0
+S4-backfill-from-pruned-peer: 0 rows, 1 events, tip 2000, sql_rows 743, rotations 0
+S5-backfill-with-full-peer: 0 rows, 1 events, tip 2000, sql_rows 744, rotations 0
+S6-can-delete-advisory: 0 rows, 4 events, tip 2200, sql_rows 300, rotations 4
+S7-ledger-cleaner-repair: 4 rows, 0 events, tip 2000, sql_rows 2000, rotations 0
+S8-rpc-resolution-matrix: 8 rows, 0 events, tip 2000, sql_rows 2000, rotations 0
+S9-fetch-depth-clamp: 9 rows, 0 events, tip 2000, sql_rows 257, rotations 0
+S2-pruned-range-fetch-no-full-peer HIGH     rpc 3/10 served, timeouts 28, rotations 0, backfill +0
+S3-partial-history-node MEDIUM   rpc 15/15 served, timeouts 0, rotations 0, backfill +0
+S4-backfill-from-pruned-peer MEDIUM   rpc 0/0 served, timeouts 7, rotations 0, backfill +742
+S7-ledger-cleaner-repair MEDIUM   rpc 0/0 served, timeouts 7, rotations 0, backfill +0
+S9-fetch-depth-clamp MEDIUM   rpc 0/0 served, timeouts 0, rotations 0, backfill +0
+S1-aggressive-pruning LOW      rpc 8/8 served, timeouts 0, rotations 2, backfill +0
+S10-rotation-deferred-while-stale LOW      rpc 0/0 served, timeouts 0, rotations 2, backfill +0
+S5-backfill-with-full-peer LOW      rpc 0/0 served, timeouts 0, rotations 0, backfill +743
+S6-can-delete-advisory LOW      rpc 0/0 served, timeouts 0, rotations 4, backfill +0
+S8-rpc-resolution-matrix LOW      rpc 3/7 served, timeouts 0, rotations 0, backfill +0
+S0-baseline-full-history INFO     rpc 120/120 served, timeouts 0, rotations 0, backfill +0
+19 controls: 17 MEASURED, 2 UNMEASURED
+manifest.json: 66 files
+SHA256SUMS entries: 68
+./.gitignore: OK
+./README.md: OK
+./docs/control-inventory.md: OK
+./docs/decision-memo.md: OK
+./docs/environment.md: OK
+./docs/findings-report.md: OK
+./docs/methodology.md: OK
+./docs/remediation-report.md: OK
+./docs/source-inventory.md: OK
+./manifest.json: OK
+./outputs/S0-baseline-full-history.csv: OK
+./outputs/S0-baseline-full-history.json: OK
+./outputs/S0-baseline-full-history.log: OK
+./outputs/S1-aggressive-pruning.csv: OK
+./outputs/S1-aggressive-pruning.json: OK
+./outputs/S1-aggressive-pruning.log: OK
+./outputs/S10-rotation-deferred-while-stale.csv: OK
+./outputs/S10-rotation-deferred-while-stale.json: OK
+./outputs/S10-rotation-deferred-while-stale.log: OK
+./outputs/S2-pruned-range-fetch-no-full-peer.csv: OK
+./outputs/S2-pruned-range-fetch-no-full-peer.json: OK
+./outputs/S2-pruned-range-fetch-no-full-peer.log: OK
+./outputs/S3-partial-history-node.csv: OK
+./outputs/S3-partial-history-node.json: OK
+./outputs/S3-partial-history-node.log: OK
+./outputs/S4-backfill-from-pruned-peer.csv: OK
+./outputs/S4-backfill-from-pruned-peer.json: OK
+./outputs/S4-backfill-from-pruned-peer.log: OK
+./outputs/S5-backfill-with-full-peer.csv: OK
+./outputs/S5-backfill-with-full-peer.json: OK
+./outputs/S5-backfill-with-full-peer.log: OK
+./outputs/S6-can-delete-advisory.csv: OK
+./outputs/S6-can-delete-advisory.json: OK
+./outputs/S6-can-delete-advisory.log: OK
+./outputs/S7-ledger-cleaner-repair.csv: OK
+./outputs/S7-ledger-cleaner-repair.json: OK
+./outputs/S7-ledger-cleaner-repair.log: OK
+./outputs/S8-rpc-resolution-matrix.csv: OK
+./outputs/S8-rpc-resolution-matrix.json: OK
+./outputs/S8-rpc-resolution-matrix.log: OK
+./outputs/S9-fetch-depth-clamp.csv: OK
+./outputs/S9-fetch-depth-clamp.json: OK
+./outputs/S9-fetch-depth-clamp.log: OK
+./outputs/controls.csv: OK
+./outputs/controls.json: OK
+./outputs/fresh-clone-reproduction.log: OK
+./outputs/matrix.csv: OK
+./outputs/matrix.json: OK
+./scenarios/S0-baseline-full-history.json: OK
+./scenarios/S1-aggressive-pruning.json: OK
+./scenarios/S10-rotation-deferred-while-stale.json: OK
+./scenarios/S2-pruned-range-fetch-no-full-peer.json: OK
+./scenarios/S3-partial-history-node.json: OK
+./scenarios/S4-backfill-from-pruned-peer.json: OK
+./scenarios/S5-backfill-with-full-peer.json: OK
+./scenarios/S6-can-delete-advisory.json: OK
+./scenarios/S7-ledger-cleaner-repair.json: OK
+./scenarios/S8-rpc-resolution-matrix.json: OK
+./scenarios/S9-fetch-depth-clamp.json: OK
+./scripts/build_matrix.py: OK
+./scripts/load_harness.py: OK
+./scripts/make_manifest.py: OK
+./scripts/make_reproduction_transcript.py: OK
+./scripts/make_sha256sums.sh: OK
+./scripts/measure_controls.py: OK
+./scripts/run_all.sh: OK
+./scripts/simulator.py: OK
+./scripts/verify_digests.sh: OK
+run_all.sh: OK
+
+--- end of run_all.log ---
+
+=== bash scripts/verify_digests.sh ===
+./.gitignore: OK
+./README.md: OK
+./docs/control-inventory.md: OK
+./docs/decision-memo.md: OK
+./docs/environment.md: OK
+./docs/findings-report.md: OK
+./docs/methodology.md: OK
+./docs/remediation-report.md: OK
+./docs/source-inventory.md: OK
+./manifest.json: OK
+./outputs/S0-baseline-full-history.csv: OK
+./outputs/S0-baseline-full-history.json: OK
+./outputs/S0-baseline-full-history.log: OK
+./outputs/S1-aggressive-pruning.csv: OK
+./outputs/S1-aggressive-pruning.json: OK
+./outputs/S1-aggressive-pruning.log: OK
+./outputs/S10-rotation-deferred-while-stale.csv: OK
+./outputs/S10-rotation-deferred-while-stale.json: OK
+./outputs/S10-rotation-deferred-while-stale.log: OK
+./outputs/S2-pruned-range-fetch-no-full-peer.csv: OK
+./outputs/S2-pruned-range-fetch-no-full-peer.json: OK
+./outputs/S2-pruned-range-fetch-no-full-peer.log: OK
+./outputs/S3-partial-history-node.csv: OK
+./outputs/S3-partial-history-node.json: OK
+./outputs/S3-partial-history-node.log: OK
+./outputs/S4-backfill-from-pruned-peer.csv: OK
+./outputs/S4-backfill-from-pruned-peer.json: OK
+./outputs/S4-backfill-from-pruned-peer.log: OK
+./outputs/S5-backfill-with-full-peer.csv: OK
+./outputs/S5-backfill-with-full-peer.json: OK
+./outputs/S5-backfill-with-full-peer.log: OK
+./outputs/S6-can-delete-advisory.csv: OK
+./outputs/S6-can-delete-advisory.json: OK
+./outputs/S6-can-delete-advisory.log: OK
+./outputs/S7-ledger-cleaner-repair.csv: OK
+./outputs/S7-ledger-cleaner-repair.json: OK
+./outputs/S7-ledger-cleaner-repair.log: OK
+./outputs/S8-rpc-resolution-matrix.csv: OK
+./outputs/S8-rpc-resolution-matrix.json: OK
+./outputs/S8-rpc-resolution-matrix.log: OK
+./outputs/S9-fetch-depth-clamp.csv: OK
+./outputs/S9-fetch-depth-clamp.json: OK
+./outputs/S9-fetch-depth-clamp.log: OK
+./outputs/controls.csv: OK
+./outputs/controls.json: OK
+./outputs/fresh-clone-reproduction.log: OK
+./outputs/matrix.csv: OK
+./outputs/matrix.json: OK
+./scenarios/S0-baseline-full-history.json: OK
+./scenarios/S1-aggressive-pruning.json: OK
+./scenarios/S10-rotation-deferred-while-stale.json: OK
+./scenarios/S2-pruned-range-fetch-no-full-peer.json: OK
+./scenarios/S3-partial-history-node.json: OK
+./scenarios/S4-backfill-from-pruned-peer.json: OK
+./scenarios/S5-backfill-with-full-peer.json: OK
+./scenarios/S6-can-delete-advisory.json: OK
+./scenarios/S7-ledger-cleaner-repair.json: OK
+./scenarios/S8-rpc-resolution-matrix.json: OK
+./scenarios/S9-fetch-depth-clamp.json: OK
+./scripts/build_matrix.py: OK
+./scripts/load_harness.py: OK
+./scripts/make_manifest.py: OK
+./scripts/make_reproduction_transcript.py: OK
+./scripts/make_sha256sums.sh: OK
+./scripts/measure_controls.py: OK
+./scripts/run_all.sh: OK
+./scripts/simulator.py: OK
+./scripts/verify_digests.sh: OK
+
+exit status: 0
+
+=== diff of regenerated outputs vs committed outputs ===
+(excludes outputs/run_all.log and this transcript, which did not exist in the clone)
+identical
+diff exit status: 0
+
+=== manifest.json SHA-256 (committed copy) ===
+37ebc9b35cbe37dc1cf5e0e47b4849943c6f5fafebdeefe4d8f9cfcb517a4996
+=== end of output ===
