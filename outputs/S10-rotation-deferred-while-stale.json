@@ -1,0 +1,158 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 256
+  },
+  "events": [
+    {
+      "clock_ms": 1244900,
+      "detail": "lastRotated 1000 -> 1311; minimumOnline 1001",
+      "event": "rotate",
+      "seq": 1311,
+      "step_seq": 1311,
+      "value": 1311
+    },
+    {
+      "clock_ms": 2269200,
+      "detail": "lastRotated 1311 -> 1567; minimumOnline 1312",
+      "event": "rotate",
+      "seq": 1567,
+      "step_seq": 1567,
+      "value": 1567
+    }
+  ],
+  "final": {
+    "cache_entries": 44,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 256,
+    "complete_ledgers": "1311-1610",
+    "counters": {
+      "acquire_attempts": 0,
+      "acquire_failed": 0,
+      "acquire_ms_total": 0,
+      "acquire_success": 0,
+      "acquire_timeouts": 0,
+      "backfill_acquired": 0,
+      "backfill_failed": 0,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 0,
+      "fetch_packs_requested": 0,
+      "fetch_packs_served": 0,
+      "rotations": 2,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 0,
+      "sql_delete_batches": 14,
+      "sql_rows_deleted": 1310
+    },
+    "get_earliest_fetch": 1354,
+    "last_rotated": 1567,
+    "minimum_online": 1312,
+    "published": 1610,
+    "sql_max": 1610,
+    "sql_min": 1311,
+    "sql_rows": 300,
+    "tip": 1610,
+    "validated_range": [
+      1311,
+      1610
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "last_rotated": 1000,
+    "minimum_online": 0,
+    "nodestore_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "tip": 1000
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [],
+  "scenario_id": "S10-rotation-deferred-while-stale",
+  "severity": "LOW",
+  "severity_reason": "Rotation is deferred for 300 ledgers while the validated age is 61 s (above the 60 s threshold) and for 10 more while the node is syncing, then fires on the first close after the node is healthy again. No data is lost beyond the configured interval.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 0,
+      "age_override": 61,
+      "op": "set_age_override",
+      "step": 0
+    },
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1000,
+      "op": "validate",
+      "rotations": 0,
+      "step": 1,
+      "tip": 1300,
+      "validated": 300
+    },
+    {
+      "acquire_ms_step": 0,
+      "mode": "SYNCING",
+      "op": "set_mode",
+      "step": 2
+    },
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1000,
+      "op": "validate",
+      "rotations": 0,
+      "step": 3,
+      "tip": 1310,
+      "validated": 10
+    },
+    {
+      "acquire_ms_step": 0,
+      "mode": "FULL",
+      "op": "set_mode",
+      "step": 4
+    },
+    {
+      "acquire_ms_step": 0,
+      "age_override": null,
+      "op": "set_age_override",
+      "step": 5
+    },
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1567,
+      "op": "validate",
+      "rotations": 2,
+      "step": 6,
+      "tip": 1610,
+      "validated": 300
+    }
+  ],
+  "title": "Rotation deferred while stale or syncing, then catches up"
+}

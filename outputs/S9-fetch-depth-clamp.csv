@@ -1,0 +1,10 @@
+scenario,op,kind,seq,outcome,detail,acquire_ms,api_version
+S9-fetch-depth-clamp,fetch_pack,,1000,refused,peer requests fetch pack for ledger we don't have,0,
+S9-fetch-depth-clamp,fetch_pack,,1500,refused,peer requests fetch pack for ledger we don't have,0,
+S9-fetch-depth-clamp,fetch_pack,,1744,served,1744,0,
+S9-fetch-depth-clamp,fetch_pack,,1900,served,1900,0,
+S9-fetch-depth-clamp,fetch_pack,,2000,served,2000,0,
+S9-fetch-depth-clamp,fetch_pack,,1744,refused,peer requests fetch pack that is too early,0,
+S9-fetch-depth-clamp,fetch_pack,,1800,refused,peer requests fetch pack that is too early,0,
+S9-fetch-depth-clamp,fetch_pack,,1900,served,1900,0,
+S9-fetch-depth-clamp,fetch_pack,,2000,served,2000,0,

@@ -1,0 +1,224 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 256
+  },
+  "events": [],
+  "final": {
+    "cache_entries": 4,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 100,
+    "complete_ledgers": "1744-2000",
+    "counters": {
+      "acquire_attempts": 0,
+      "acquire_failed": 0,
+      "acquire_ms_total": 0,
+      "acquire_success": 0,
+      "acquire_timeouts": 0,
+      "backfill_acquired": 0,
+      "backfill_failed": 0,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 4,
+      "fetch_packs_requested": 9,
+      "fetch_packs_served": 5,
+      "rotations": 0,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 0,
+      "sql_delete_batches": 0,
+      "sql_rows_deleted": 0
+    },
+    "get_earliest_fetch": 1900,
+    "last_rotated": 1744,
+    "minimum_online": 1745,
+    "published": 2000,
+    "sql_max": 2000,
+    "sql_min": 1744,
+    "sql_rows": 257,
+    "tip": 2000,
+    "validated_range": [
+      1744,
+      2000
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "last_rotated": 1744,
+    "minimum_online": 1745,
+    "nodestore_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1744,
+        2000
+      ]
+    ],
+    "tip": 2000
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "peer requests fetch pack for ledger we don't have",
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "refused",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 1000
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "peer requests fetch pack for ledger we don't have",
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "refused",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 1500
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": 1744,
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "served",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 1744
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": 1900,
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "served",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 1900
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": 2000,
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "served",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 2000
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "peer requests fetch pack that is too early",
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "refused",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 1744
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "peer requests fetch pack that is too early",
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "refused",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 1800
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": 1900,
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "served",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 1900
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": 2000,
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "served",
+      "scenario": "S9-fetch-depth-clamp",
+      "seq": 2000
+    }
+  ],
+  "scenario_id": "S9-fetch-depth-clamp",
+  "severity": "MEDIUM",
+  "severity_reason": "A fetch-pack root below getEarliestFetch is refused with feeMalformedRequest, and the clamp means online_delete (256) binds before fetch_depth does at the default. With fetch_depth narrowed to 100, the earliest fetch rises to 1900 and two more roots are refused.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 0,
+      "clamped_fetch_depth": 256,
+      "get_earliest_fetch": 1744,
+      "op": "fetch_pack",
+      "outcomes": {
+        "refused": 2,
+        "served": 3
+      },
+      "roots": [
+        1000,
+        1500,
+        1744,
+        1900,
+        2000
+      ],
+      "step": 0
+    },
+    {
+      "acquire_ms_step": 0,
+      "clamped_fetch_depth": 100,
+      "fetch_depth": 100,
+      "get_earliest_fetch": 1900,
+      "op": "set_fetch_depth",
+      "step": 1
+    },
+    {
+      "acquire_ms_step": 0,
+      "clamped_fetch_depth": 100,
+      "get_earliest_fetch": 1900,
+      "op": "fetch_pack",
+      "outcomes": {
+        "refused": 2,
+        "served": 2
+      },
+      "roots": [
+        1744,
+        1800,
+        1900,
+        2000
+      ],
+      "step": 2
+    }
+  ],
+  "title": "Fetch-depth clamp and the fetch-pack earliest gate"
+}

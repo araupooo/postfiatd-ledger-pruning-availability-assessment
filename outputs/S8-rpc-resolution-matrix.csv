@@ -1,0 +1,9 @@
+scenario,op,kind,seq,outcome,detail,acquire_ms,api_version
+S8-rpc-resolution-matrix,rpc_fetch,index,1999,not_synced,rpcNOT_SYNCED,0,2
+S8-rpc-resolution-matrix,rpc_fetch,hash,1999,served,1999,0,2
+S8-rpc-resolution-matrix,rpc_fetch,index,1999,not_synced,rpcNO_CURRENT,0,1
+S8-rpc-resolution-matrix,rpc_fetch_both,both,1999,param_error,Exactly one of ledger_hash and ledger_index can be set.,0,2
+S8-rpc-resolution-matrix,rpc_fetch,index,2000,param_error,Ledger index too large,0,2
+S8-rpc-resolution-matrix,rpc_fetch,index,0,param_error,Ledger index too small,0,2
+S8-rpc-resolution-matrix,rpc_fetch,index,1999,served,1999,0,2
+S8-rpc-resolution-matrix,rpc_fetch,hash,1999,served,1999,0,2
