@@ -1,0 +1,265 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "delete_batch": 100,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 256
+  },
+  "events": [
+    {
+      "clock_ms": 1024900,
+      "detail": "lastRotated 1000 -> 1256; minimumOnline 1001",
+      "event": "rotate",
+      "seq": 1256,
+      "step_seq": 1256,
+      "value": 1256
+    },
+    {
+      "clock_ms": 2049100,
+      "detail": "lastRotated 1256 -> 1512; minimumOnline 1257",
+      "event": "rotate",
+      "seq": 1512,
+      "step_seq": 1512,
+      "value": 1512
+    }
+  ],
+  "final": {
+    "cache_entries": 98,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 256,
+    "complete_ledgers": "1005,1024,1100,1200,1256-1600",
+    "counters": {
+      "acquire_attempts": 4,
+      "acquire_failed": 0,
+      "acquire_ms_total": 1377,
+      "acquire_success": 4,
+      "acquire_timeouts": 0,
+      "backfill_acquired": 0,
+      "backfill_failed": 0,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 2,
+      "fetch_packs_requested": 4,
+      "fetch_packs_served": 2,
+      "rotations": 2,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 8,
+      "sql_delete_batches": 13,
+      "sql_rows_deleted": 1255
+    },
+    "get_earliest_fetch": 1344,
+    "last_rotated": 1512,
+    "minimum_online": 1257,
+    "published": 1600,
+    "sql_max": 1600,
+    "sql_min": 1005,
+    "sql_rows": 349,
+    "tip": 1600,
+    "validated_range": [
+      1256,
+      1600
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "last_rotated": 1000,
+    "minimum_online": 0,
+    "nodestore_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "tip": 1000
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [
+    {
+      "acquire_ms": 806,
+      "api_version": 2,
+      "detail": 1005,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1005
+    },
+    {
+      "acquire_ms": 471,
+      "api_version": 2,
+      "detail": 1100,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1100
+    },
+    {
+      "acquire_ms": 100,
+      "api_version": 2,
+      "detail": 1200,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1200
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1256,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1256
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1257,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1257
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1400,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1400
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1500,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1500
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1599,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1599
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "peer requests fetch pack for ledger we don't have",
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "refused",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1000
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": "peer requests fetch pack that is too early",
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "refused",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1256
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": 1400,
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1400
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": "",
+      "detail": 1600,
+      "kind": "",
+      "op": "fetch_pack",
+      "outcome": "served",
+      "scenario": "S1-aggressive-pruning",
+      "seq": 1600
+    }
+  ],
+  "scenario_id": "S1-aggressive-pruning",
+  "severity": "LOW",
+  "severity_reason": "Pruning deletes exactly as configured and the node keeps serving every requested ledger because a full-history peer exists. The availability cost appears only when no such peer exists (see S2).",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1512,
+      "op": "validate",
+      "rotations": 2,
+      "step": 0,
+      "tip": 1600,
+      "validated": 600
+    },
+    {
+      "acquire_ms_step": 1377,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcomes": {
+        "served": 8
+      },
+      "requested": 8,
+      "step": 1
+    },
+    {
+      "acquire_ms_step": 0,
+      "clamped_fetch_depth": 256,
+      "get_earliest_fetch": 1344,
+      "op": "fetch_pack",
+      "outcomes": {
+        "refused": 2,
+        "served": 2
+      },
+      "roots": [
+        1000,
+        1256,
+        1400,
+        1600
+      ],
+      "step": 2
+    }
+  ],
+  "title": "Aggressive pruning: online_delete 256 over 600 ledgers"
+}

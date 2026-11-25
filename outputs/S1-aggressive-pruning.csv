@@ -1,0 +1,13 @@
+scenario,op,kind,seq,outcome,detail,acquire_ms,api_version
+S1-aggressive-pruning,rpc_fetch,index,1005,served,1005,806,2
+S1-aggressive-pruning,rpc_fetch,index,1100,served,1100,471,2
+S1-aggressive-pruning,rpc_fetch,index,1200,served,1200,100,2
+S1-aggressive-pruning,rpc_fetch,index,1256,served,1256,0,2
+S1-aggressive-pruning,rpc_fetch,index,1257,served,1257,0,2
+S1-aggressive-pruning,rpc_fetch,index,1400,served,1400,0,2
+S1-aggressive-pruning,rpc_fetch,index,1500,served,1500,0,2
+S1-aggressive-pruning,rpc_fetch,index,1599,served,1599,0,2
+S1-aggressive-pruning,fetch_pack,,1000,refused,peer requests fetch pack for ledger we don't have,0,
+S1-aggressive-pruning,fetch_pack,,1256,refused,peer requests fetch pack that is too early,0,
+S1-aggressive-pruning,fetch_pack,,1400,served,1400,0,
+S1-aggressive-pruning,fetch_pack,,1600,served,1600,0,

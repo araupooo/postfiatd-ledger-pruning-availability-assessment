@@ -1,0 +1,221 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 256
+  },
+  "events": [],
+  "final": {
+    "cache_entries": 6,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 256,
+    "complete_ledgers": "1256-1600",
+    "counters": {
+      "acquire_attempts": 7,
+      "acquire_failed": 7,
+      "acquire_ms_total": 84000,
+      "acquire_success": 0,
+      "acquire_timeouts": 28,
+      "backfill_acquired": 0,
+      "backfill_failed": 0,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 0,
+      "fetch_packs_requested": 0,
+      "fetch_packs_served": 0,
+      "rotations": 0,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 7,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 3,
+      "sql_delete_batches": 0,
+      "sql_rows_deleted": 0
+    },
+    "get_earliest_fetch": 1344,
+    "last_rotated": 1512,
+    "minimum_online": 1257,
+    "published": 1600,
+    "sql_max": 1600,
+    "sql_min": 1256,
+    "sql_rows": 345,
+    "tip": 1600,
+    "validated_range": [
+      1256,
+      1600
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        1256,
+        1600
+      ]
+    ],
+    "last_rotated": 1512,
+    "minimum_online": 1257,
+    "nodestore_ranges": [
+      [
+        1256,
+        1600
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1256,
+        1600
+      ]
+    ],
+    "tip": 1600
+  },
+  "peers": [
+    {
+      "id": 2,
+      "min_seq": 1258,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [
+    {
+      "acquire_ms": 21000,
+      "api_version": 2,
+      "detail": "acquiring ledger containing requested index",
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "lgr_not_found",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1000
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": "acquiring ledger containing requested index",
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "lgr_not_found",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1005
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": "acquiring ledger containing requested index",
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "lgr_not_found",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1010
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": "acquiring ledger containing requested index",
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "lgr_not_found",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1020
+    },
+    {
+      "acquire_ms": 21000,
+      "api_version": 2,
+      "detail": "lgrNotFound",
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "lgr_not_found",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1100
+    },
+    {
+      "acquire_ms": 21000,
+      "api_version": 2,
+      "detail": "lgrNotFound",
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "lgr_not_found",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1200
+    },
+    {
+      "acquire_ms": 21000,
+      "api_version": 2,
+      "detail": "lgrNotFound",
+      "kind": "hash",
+      "op": "rpc_fetch",
+      "outcome": "lgr_not_found",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1010
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1300,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1300
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1400,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1400
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1500,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S2-pruned-range-fetch-no-full-peer",
+      "seq": 1500
+    }
+  ],
+  "scenario_id": "S2-pruned-range-fetch-no-full-peer",
+  "severity": "HIGH",
+  "severity_reason": "Every pruned-range request fails: 7 of 7 return lgrNotFound. The 4 first attempts each burn 7 acquire timeouts (21 s); the 3 repeats of the failed candidate hash short-circuit on the failed-hash cache (0 ms). Total wasted acquire time 84,000 ms. The data is unrecoverable from the available peer set.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 63000,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcomes": {
+        "lgr_not_found": 6
+      },
+      "requested": 6,
+      "step": 0
+    },
+    {
+      "acquire_ms_step": 21000,
+      "kind": "hash",
+      "op": "rpc_fetch",
+      "outcomes": {
+        "lgr_not_found": 1
+      },
+      "requested": 1,
+      "step": 1
+    },
+    {
+      "acquire_ms_step": 0,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcomes": {
+        "served": 3
+      },
+      "requested": 3,
+      "step": 2
+    }
+  ],
+  "title": "Pruned-range fetch with no full-history peer"
+}

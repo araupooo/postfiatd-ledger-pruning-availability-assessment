@@ -1,0 +1,11 @@
+[seq 1000 t+0ms] validating 600 ledgers
+[seq 1256 t+1024000ms] rotating validatedSeq 1256 lastRotated 1000 deleteInterval 256 canDelete_ 4294967295 state FULL age 0s
+[seq 1256 t+1024900ms] finished deleting from: Ledgers (999 rows, 10 batches)
+[seq 1256 t+1024900ms] copied ledger 1256 nodecount 128
+[seq 1512 t+2048900ms] rotating validatedSeq 1512 lastRotated 1256 deleteInterval 256 canDelete_ 4294967295 state FULL age 0s
+[seq 1512 t+2049100ms] finished deleting from: Ledgers (256 rows, 3 batches)
+[seq 1512 t+2049100ms] copied ledger 1512 nodecount 128
+[seq 1600 t+2401100ms] acquired ledger 1024 from peer 1 in 579ms
+[seq 1600 t+2401100ms] acquired ledger 1005 from peer 1 in 227ms
+[seq 1600 t+2401100ms] acquired ledger 1100 from peer 1 in 471ms
+[seq 1600 t+2401100ms] acquired ledger 1200 from peer 1 in 100ms

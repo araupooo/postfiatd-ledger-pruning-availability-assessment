@@ -1,0 +1,11 @@
+scenario,op,kind,seq,outcome,detail,acquire_ms,api_version
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1000,lgr_not_found,acquiring ledger containing requested index,21000,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1005,lgr_not_found,acquiring ledger containing requested index,0,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1010,lgr_not_found,acquiring ledger containing requested index,0,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1020,lgr_not_found,acquiring ledger containing requested index,0,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1100,lgr_not_found,lgrNotFound,21000,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1200,lgr_not_found,lgrNotFound,21000,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,hash,1010,lgr_not_found,lgrNotFound,21000,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1300,served,1300,0,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1400,served,1400,0,2
+S2-pruned-range-fetch-no-full-peer,rpc_fetch,index,1500,served,1500,0,2

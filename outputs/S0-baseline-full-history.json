@@ -1,0 +1,1310 @@
+{
+  "config": {
+    "advisory_delete": false,
+    "fetch_depth": 1000000000,
+    "ledger_history": 256,
+    "online_delete": 0
+  },
+  "events": [],
+  "final": {
+    "cache_entries": 221,
+    "can_delete": 4294967295,
+    "clamped_fetch_depth": 1000000000,
+    "complete_ledgers": "1-1120",
+    "counters": {
+      "acquire_attempts": 0,
+      "acquire_failed": 0,
+      "acquire_ms_total": 0,
+      "acquire_success": 0,
+      "acquire_timeouts": 0,
+      "backfill_acquired": 0,
+      "backfill_failed": 0,
+      "cleaner_cleaned": 0,
+      "cleaner_failed": 0,
+      "fetch_packs_refused": 0,
+      "fetch_packs_requested": 0,
+      "fetch_packs_served": 0,
+      "rotations": 0,
+      "rpc_acquiring": 0,
+      "rpc_lgr_not_found": 0,
+      "rpc_not_ready": 0,
+      "rpc_not_synced": 0,
+      "rpc_param_error": 0,
+      "rpc_served": 120,
+      "sql_delete_batches": 0,
+      "sql_rows_deleted": 0
+    },
+    "get_earliest_fetch": 0,
+    "last_rotated": 1000,
+    "minimum_online": 1,
+    "published": 1120,
+    "sql_max": 1120,
+    "sql_min": 1,
+    "sql_rows": 1120,
+    "tip": 1120,
+    "validated_range": [
+      1120,
+      1120
+    ]
+  },
+  "initial": {
+    "can_delete": 4294967295,
+    "complete_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "last_rotated": 1000,
+    "minimum_online": 0,
+    "nodestore_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "sql_ranges": [
+      [
+        1,
+        1000
+      ]
+    ],
+    "tip": 1000
+  },
+  "peers": [
+    {
+      "id": 1,
+      "min_seq": 1,
+      "tip": 2500
+    }
+  ],
+  "pinned_commit": "0085a1ff885d6a446369cf73a4430f75af22be55",
+  "rows": [
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 900,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 900
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 901,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 901
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 902,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 902
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 903,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 903
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 904,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 904
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 905,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 905
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 906,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 906
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 907,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 907
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 908,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 908
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 909,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 909
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 910,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 910
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 911,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 911
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 912,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 912
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 913,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 913
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 914,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 914
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 915,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 915
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 916,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 916
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 917,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 917
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 918,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 918
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 919,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 919
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 920,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 920
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 921,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 921
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 922,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 922
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 923,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 923
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 924,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 924
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 925,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 925
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 926,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 926
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 927,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 927
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 928,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 928
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 929,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 929
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 930,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 930
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 931,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 931
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 932,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 932
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 933,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 933
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 934,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 934
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 935,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 935
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 936,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 936
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 937,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 937
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 938,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 938
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 939,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 939
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 940,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 940
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 941,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 941
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 942,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 942
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 943,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 943
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 944,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 944
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 945,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 945
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 946,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 946
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 947,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 947
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 948,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 948
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 949,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 949
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 950,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 950
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 951,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 951
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 952,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 952
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 953,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 953
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 954,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 954
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 955,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 955
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 956,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 956
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 957,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 957
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 958,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 958
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 959,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 959
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 960,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 960
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 961,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 961
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 962,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 962
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 963,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 963
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 964,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 964
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 965,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 965
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 966,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 966
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 967,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 967
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 968,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 968
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 969,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 969
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 970,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 970
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 971,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 971
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 972,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 972
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 973,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 973
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 974,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 974
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 975,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 975
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 976,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 976
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 977,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 977
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 978,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 978
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 979,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 979
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 980,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 980
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 981,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 981
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 982,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 982
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 983,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 983
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 984,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 984
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 985,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 985
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 986,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 986
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 987,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 987
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 988,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 988
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 989,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 989
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 990,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 990
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 991,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 991
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 992,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 992
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 993,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 993
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 994,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 994
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 995,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 995
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 996,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 996
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 997,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 997
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 998,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 998
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 999,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 999
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1000,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1000
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1001,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1001
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1002,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1002
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1003,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1003
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1004,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1004
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1005,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1005
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1006,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1006
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1007,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1007
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1008,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1008
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1009,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1009
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1010,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1010
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1011,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1011
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1012,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1012
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1013,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1013
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1014,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1014
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1015,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1015
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1016,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1016
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1017,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1017
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1018,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1018
+    },
+    {
+      "acquire_ms": 0,
+      "api_version": 2,
+      "detail": 1019,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcome": "served",
+      "scenario": "S0-baseline-full-history",
+      "seq": 1019
+    }
+  ],
+  "scenario_id": "S0-baseline-full-history",
+  "severity": "INFO",
+  "severity_reason": "Control case. No pruning configured, so every ledger in the modelled chain is served locally.",
+  "simulated": true,
+  "steps": [
+    {
+      "acquire_ms_step": 0,
+      "last_rotated": 1000,
+      "op": "validate",
+      "rotations": 0,
+      "step": 0,
+      "tip": 1120,
+      "validated": 120
+    },
+    {
+      "acquire_ms_step": 0,
+      "kind": "index",
+      "op": "rpc_fetch",
+      "outcomes": {
+        "served": 120
+      },
+      "requested": 120,
+      "step": 1
+    }
+  ],
+  "title": "Baseline: full-history node, no pruning"
+}
